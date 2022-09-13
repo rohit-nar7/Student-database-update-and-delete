@@ -28,7 +28,7 @@ public class DeleteUpdateStudentData
     public void deleteStudentData(){
       // call getConnection() method
         try {
-            String query = "Delete from student.student where name = 'Karade'";
+            String query = "Delete from school.student where rollNo = 14";
             Statement statement = getConnection().createStatement();
             statement.executeUpdate(query);
             System.out.println("Deleted ");
@@ -45,7 +45,7 @@ public class DeleteUpdateStudentData
         Statement statement = null;
         try {
             statement = getConnection().createStatement();
-            String query = "UPDATE  student.student SET name = 'Kaka' where name = 'Rohit'";
+            String query = "UPDATE  school.student SET totalMarks = 678 where rollNo = 15";
             statement.executeUpdate(query);
             System.out.println("Database values updated");
 
